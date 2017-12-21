@@ -54,10 +54,7 @@ function addRolesToUsersInGroups(options) {
 }
 
 /**
- * @name addRolesToGroups
- * @method
- * @memberof Core
- * @summary Add roles to the default groups for shops and updates any users that are in
+ * Add roles to the default groups for shops and updates any users that are in
  * those permission groups
  * Options:
  * allShops: add supplied roles to all shops, defaults to false

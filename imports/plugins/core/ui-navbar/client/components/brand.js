@@ -15,7 +15,8 @@ class Brand extends Component {
 
   handleClick(event) {
     event.preventDefault();
-    Reaction.Router.go("/");
+    //Reaction.Router.go("/");
+    window.location = "http://ec2-54-244-61-160.us-west-2.compute.amazonaws.com";
   }
 
   render() {
@@ -23,7 +24,7 @@ class Brand extends Component {
       <a className="brand" onClick={this.handleClick}>
         {this.props.logo &&
           <div className="logo">
-            <img src={this.props.logo} />
+            	<img src={this.props.logo} />
           </div>
         }
         <span className="title">{this.props.title}</span>

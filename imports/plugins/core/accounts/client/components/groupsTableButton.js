@@ -4,8 +4,6 @@ import { Components, registerComponent, withPermissions } from "@reactioncommerc
 
 /**
  * @summary React stateless component for "remove from group" button for groupTable
- * @memberof Accounts
- * @example <Components.GroupsTableButton {...{ account, group, handleRemoveUserFromGroup }} />
  * @param {Object} props - React PropTypes
  * @property {Object} account - User account object
  * @property {Object} group - Group data

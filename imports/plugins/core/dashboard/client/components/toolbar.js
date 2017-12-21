@@ -75,37 +75,28 @@ class PublishControls extends Component {
 
   renderShopSelect() {
     let menuItems;
-
-    // If a user has owner, admin, or marketplace permissions for more than one (1) shops
-    // show the shop switcher to allow for easy switching between the shops
-    if (Reaction.hasShopSwitcherAccess()) {
-      if (Array.isArray(this.props.shops)) {
-        menuItems = this.props.shops.map((shop, index) => {
-          return (
-            <MenuItem
-              label={shop.name}
-              selectLabel={shop.name}
-              value={shop._id}
-              key={index}
-            />
-          );
-        });
-      }
-
-      return (
-        <DropDownMenu
-          onChange={this.onShopSelectChange}
-          value={this.props.shopId}
-          closeOnClick={true}
-        >
-          {menuItems}
-        </DropDownMenu>
-      );
+    if (Array.isArray(this.props.shops)) {
+      menuItems = this.props.shops.map((shop, index) => {
+        return (
+          <MenuItem
+            label={shop.name}
+            selectLabel={shop.name}
+            value={shop._id}
+            key={index}
+          />
+        );
+      });
     }
 
-    // If the user is just a shop owner, not a marketplace owner,
-    // make sure the shop is set to their shop and do not show the shop switcher
-    return this.onShopSelectChange(null, Reaction.getSellerShopId());
+    return (
+      <DropDownMenu
+        onChange={this.onShopSelectChange}
+        value={this.props.shopId}
+        closeOnClick={true}
+      >
+        {menuItems}
+      </DropDownMenu>
+    );
   }
 
   renderVisibilitySwitch() {

@@ -4,7 +4,8 @@ import { Roles } from "meteor/alanning:roles";
 import { Reaction, i18next, i18nextDep } from "/client/api";
 import * as Collections from "/lib/collections";
 
-/*
+
+/**
  * registerHelper displayName
  */
 Template.registerHelper("displayName", function (displayUser) {
@@ -27,9 +28,10 @@ Template.registerHelper("displayName", function (displayUser) {
   }
 });
 
-/*
+/**
  * registerHelper fName
  */
+
 Template.registerHelper("fName", function (displayUser) {
   const user = displayUser || Meteor.user();
   if (user && user.profile && user.profile.name) {

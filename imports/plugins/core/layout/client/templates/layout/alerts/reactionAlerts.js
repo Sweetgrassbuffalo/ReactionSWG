@@ -72,7 +72,6 @@ Object.assign(Alerts, {
   alert(titleOrOptions, messageOrCallback, options, callback) {
     if (_.isObject(titleOrOptions)) {
       return swal({
-        useRejections: true,
         type: "info",
         ...titleOrOptions
       }).then((isConfirm) => {
@@ -95,7 +94,6 @@ Object.assign(Alerts, {
     const message = messageOrCallback;
 
     return swal({
-      useRejections: true,
       title,
       text: message,
       type: "info",

@@ -130,7 +130,8 @@ Template.coreOrderShippingInvoice.events({
     const settingsKey = paymentMethod && paymentMethod.paymentSettingsKey;
     // check if payment provider supports de-authorize
     const checkSupportedMethods = Packages.findOne({
-      _id: packageId
+      _id: packageId,
+      shopId: Reaction.getShopId()
     }).settings[settingsKey].support;
 
     const orderStatus = paymentMethod && paymentMethod.status;

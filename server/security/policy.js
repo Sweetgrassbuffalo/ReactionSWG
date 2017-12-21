@@ -39,6 +39,14 @@ BrowserPolicy.content.allowOriginForAll("connect.facebook.net");
 BrowserPolicy.content.allowOriginForAll("*.googleusercontent.com");
 BrowserPolicy.content.allowOriginForAll("*.cdninstagram.com");
 
+BrowserPolicy.content.allowOriginForAll("https://localhost:*");
+BrowserPolicy.content.allowOriginForAll("http://localhost:*");
+BrowserPolicy.content.allowOriginForAll("localhost:*");
+BrowserPolicy.content.allowConnectOrigin("http://localhost:*");
+BrowserPolicy.content.allowConnectOrigin("https://localhost:*");
+BrowserPolicy.content.allowOriginForAll("*.pixabay.com");
+BrowserPolicy.content.allowOriginForAll("ec2-54-244-61-160.us-west-2.compute.amazonaws.com");
+
 BrowserPolicy.content.allowImageOrigin("fbcdn-profile-a.akamaihd.net");
 BrowserPolicy.content.allowImageOrigin("secure.gravatar.com");
 BrowserPolicy.content.allowImageOrigin("i0.wp.com");

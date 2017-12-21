@@ -6,16 +6,13 @@ import { Reaction, Logger } from "/server/api";
 
 
 /**
- * @method getMailUrl
- * @summary get the smtp URL for sending emails
+ * getMailUrl - get the smtp URL for sending emails
  * There are 3 possible ways to set the email configuration and
  * the first value found will be used.
  * The priority order is:
  *   1. MAIL_URL environment variable
  *   2. Meteor settings (MAIL_URL key)
  *   3. Core shop settings from the database
- * @memberof Email
- * @example Reaction.Email.getMailUrl()
  * @return {String} returns an SMTP url if one of the settings have been set
  */
 export function getMailUrl() {
@@ -67,10 +64,7 @@ export function getMailUrl() {
 
 
 /**
- * @method getMailConfig
- * @summary get the email sending config for Nodemailer
- * @memberof Email
- * @example Reaction.Email.getMailConfig()
+ * getMailConfig - get the email sending config for Nodemailer
  * @return {{host: String, port: Number, secure: Boolean, auth: Object, logger: Boolean}} returns a config object
  */
 export function getMailConfig() {
@@ -186,10 +180,8 @@ export function getMailConfig() {
 
 
 /**
- * @method verifyConfig
- * @summary Verify a transporter configuration works
- * @see https://github.com/nodemailer/nodemailer#verify-smtp-connection-configuration
- * @memberof Email
+ * Verify a transporter configuration works
+ * https://github.com/nodemailer/nodemailer#verify-smtp-connection-configuration
  * @param {Object} config - a Nodemailer transporter config object
  * @param {Function} callback - optional callback with standard error/result args
  * @return {Promise} returns a Promise if no callback is provided

@@ -2,9 +2,8 @@ import { Shops } from "/lib/collections";
 import { Logger } from "/server/api";
 
 /**
- *  @method setShopName
- *  @memberof Core
- *  @example Reaction.setShopName(doc)
+ *  setShopName
+ *  @private
  *  @param {Object} shop - shop
  *  @summary when new shop is created, set shop name if REACTION_SHOP_NAME env var exists
  *  @returns {undefined} undefined
