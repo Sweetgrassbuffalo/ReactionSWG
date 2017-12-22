@@ -15,8 +15,8 @@ class Brand extends Component {
 
   handleClick(event) {
     event.preventDefault();
-    //Reaction.Router.go("/");
-    window.location = "http://ec2-54-244-61-160.us-west-2.compute.amazonaws.com";
+    Reaction.Router.go("/");
+    //window.location = "http://ec2-54-244-61-160.us-west-2.compute.amazonaws.com";
   }
 
   render() {
