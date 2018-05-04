@@ -4,9 +4,9 @@ Below is a description of how to deploy the Sweetgrass project as well as other 
 
 ## Deploying
 
-The project is deployed using Docker and Dockerhub. Below is a description of how to build the docker image from the Sweetgrass project, process that need to occur inside the docker image, and finally how to build and run the projects docker container.
+The project is deployed using Docker and Dockerhub. Below is a description of how to build the docker image from the Sweetgrass project, how to build and run the projects docker container, and process that need to occur inside the docker container.
 
-### Building the Docker Image and deploying it to Docker Hub
+### Building the Docker Image
 
 ```
 $ docker build --build-arg TOOL_NODE_FLAGS="--max-old-space-size=2048" -t <name_your_image> .
@@ -21,6 +21,17 @@ docker run \
   -e REACTION_USER="admin@localhost" \
   -e REACTION_AUTH="frontline3701F!" \
   beartuskf/mycustom
+```
+
+or if the image name is different
+
+```
+docker run \
+  -p 80:3000 \
+  -e MONGO_URL="mongodb://Sweetgrass:Frontline@ec2-35-162-176-205.us-west-2.compute.amazonaws.com:27017/sweetgrass" \
+  -e REACTION_USER="admin@localhost" \
+  -e REACTION_AUTH="frontline3701F!" \
+  <name_of_image>
 ```
 
 ### Processes to implement inside the Docker Container
