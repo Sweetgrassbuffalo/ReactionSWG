@@ -68,7 +68,7 @@ $ docker cp hmacmd5_inc.php <container_id>:/hmacmd5_inc.php
 
 * Once again, run the command to access the shell for the container. We did this a few steps ago. And then execute this command from the directory inside the container that contains the file  hmacmd5_inc.php
 ```
-$ docker mv hmacmd5_inc.php /opt/reaction/dist/bundle/programs/server/
+$ mv hmacmd5_inc.php /opt/reaction/dist/bundle/programs/server/
 ```
 
 * Now, just make sure the application is running as desired.
