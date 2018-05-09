@@ -19,7 +19,7 @@ docker run \
   -p 80:3000 \
   -e MONGO_URL="mongodb://Sweetgrass:Frontline@ec2-35-162-176-205.us-west-2.compute.amazonaws.com:27017/sweetgrass" \
   -e REACTION_USER="admin@localhost" \
-  -e REACTION_AUTH="frontline3701F!" \
+  -e REACTION_AUTH="*************" \
   beartuskf/mycustom
 ```
 
@@ -30,7 +30,7 @@ docker run \
   -p 80:3000 \
   -e MONGO_URL="mongodb://Sweetgrass:Frontline@ec2-35-162-176-205.us-west-2.compute.amazonaws.com:27017/sweetgrass" \
   -e REACTION_USER="admin@localhost" \
-  -e REACTION_AUTH="frontline3701F!" \
+  -e REACTION_AUTH="************" \
   <name_of_image>
 ```
 
