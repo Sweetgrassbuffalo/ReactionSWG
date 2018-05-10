@@ -17,7 +17,7 @@ $ docker build --build-arg TOOL_NODE_FLAGS="--max-old-space-size=2048" -t <name_
 ```
 docker run \
   -p 80:3000 \
-  -e MONGO_URL="mongodb://Sweetgrass:Frontline@ec2-35-162-176-205.us-west-2.compute.amazonaws.com:27017/sweetgrass" \
+  -e MONGO_URL="mongodb://Sweetgrass:********@ec2-35-162-176-205.us-west-2.compute.amazonaws.com:27017/sweetgrass" \
   -e REACTION_USER="admin@localhost" \
   -e REACTION_AUTH="*************" \
   beartuskf/mycustom
@@ -28,7 +28,7 @@ or if the image name is different
 ```
 docker run \
   -p 80:3000 \
-  -e MONGO_URL="mongodb://Sweetgrass:Frontline@ec2-35-162-176-205.us-west-2.compute.amazonaws.com:27017/sweetgrass" \
+  -e MONGO_URL="mongodb://Sweetgrass:********@ec2-35-162-176-205.us-west-2.compute.amazonaws.com:27017/sweetgrass" \
   -e REACTION_USER="admin@localhost" \
   -e REACTION_AUTH="************" \
   <name_of_image>
